@@ -90,18 +90,33 @@ public class Main {
     }
 
     private static void vetores(int tamanho){
-        JOptionPane.showMessageDialog(null,"Neste momento o software criou um vetor com "+tamanho+" posições");
+        JOptionPane.showMessageDialog(null,"Neste momento o software criou um vetor de pessoas com "+tamanho+" posições");
         Vetor<Pessoa>vetorPessoas = new Vetor<Pessoa>(tamanho);
         StringBuilder list = new StringBuilder();
+        int pos=0;
         for(int i=0;i<tamanho;i++){
             String nome = JOptionPane.showInputDialog(null,"Digte o nome da pessoa "+i);
             int id=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+i));
             Pessoa p = new Pessoa(id,nome);
             vetorPessoas.inserirEm(i,p);
+            pos++;
         }
         for(int i=0;i<tamanho;i++){
             list.append("Pessoa "+i+" ->"+" Nome: "+ vetorPessoas.recuperar(i).getNome()+" id: "+ vetorPessoas.recuperar(i).getId()+"\n");
         }
         JOptionPane.showMessageDialog(null,list.toString());
+        JOptionPane.showMessageDialog(null,"O nosso vetor é genérico, desta forma vamos adcionar inteiros ao vetor.");
+        tamanho=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o tamanho do vetor de inteiros "));
+        Vetor<Integer> vetorDeInteiros = new Vetor<Integer>(tamanho);
+        StringBuilder listInteger = new StringBuilder();
+        listInteger.append("Vetor de inteiros que você escolheu: \n");
+        for(int i=0;i<tamanho;i++){
+            int numero = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite um número a ser adicionado"));
+            vetorDeInteiros.inserirEm(i,numero);
+            listInteger.append(vetorDeInteiros.recuperar(i)+"\n");
+        }
+
+        JOptionPane.showMessageDialog(null,listInteger.toString());
+
     }
 }
