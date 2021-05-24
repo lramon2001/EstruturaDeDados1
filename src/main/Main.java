@@ -16,6 +16,7 @@ public class Main {
             String menu =
                     "1-Fazer gerenciamento de memória;\n" +
                     "2-Estudo de vetores\n"+
+                    "3-Usar o vetor que cria novas posições\n"+
                     "0-Sair";
 
             String strx = JOptionPane.showInputDialog(null,menu);
@@ -28,6 +29,28 @@ public class Main {
                     int tamanho = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o tamanho do vetor de pessoas que desejas criar."));
                     vetores(tamanho);
                     break;
+                case 3:
+                    Vetor<Pessoa> pessoas = new Vetor<Pessoa>();
+                    StringBuilder listaPessoas = new StringBuilder();
+                    int loop =1;
+                    listaPessoas.append("Lista das pessoas\n");
+
+                    while(loop!=0){
+                        loop=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite 0 para sair do loop\n E qualquer numero inteiro para continuar."));
+                        if(loop==0){
+                            break;
+                        }
+                        Pessoa p2 = new Pessoa();
+                        String nome=JOptionPane.showInputDialog(null,"Digite o nome da pessoa que desejas adicionar ao vetor de pessoas");
+                        int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa que desejas adicionar ao vetor de pessoas"));
+                        p2.setNome(nome);
+                        p2.setId(id);
+                        pessoas.inserir(p2);
+                        listaPessoas.append("Id: "+p2.getId()+", Nome: "+p2.getNome()+";\n");
+                    }
+                    JOptionPane.showMessageDialog(null,listaPessoas.toString());
+                    break;
+
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
                     break;
