@@ -39,6 +39,7 @@ Isso significa que quando uma variável Reference-Type não é mais usada, ela p
 de Reference-Types são classes, objetos, matrizes, indexadores, interfaces etc.
 ```
 ## Arrays / Vetores
+![imagem](https://github.com/lramon2001/EstruturaDeDados1/blob/main/arrayok.png)
 ```
 Um array é uma estrutura de dados que armazena uma coleção de elementos de tal forma que cada um dos elementos possa ser 
 identificado por, pelo menos, um índice ou uma chave. Essa estrutura de dados também é conhecida como variável indexada,
