@@ -91,10 +91,9 @@ public class Main {
 
     private static void vetores(int tamanho){
         JOptionPane.showMessageDialog(null,"Neste momento o software criou um vetor com "+tamanho+" posições");
-        Vetor vetorPessoas = new Vetor(tamanho);
+        Vetor<Pessoa>vetorPessoas = new Vetor<Pessoa>(tamanho);
         StringBuilder list = new StringBuilder();
         for(int i=0;i<tamanho;i++){
-
             String nome = JOptionPane.showInputDialog(null,"Digte o nome da pessoa "+i);
             int id=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+i));
             Pessoa p = new Pessoa(id,nome);

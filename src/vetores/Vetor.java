@@ -2,18 +2,18 @@ package vetores;
 
 import models.Pessoa;
 
-public class Vetor {
-    private Pessoa[] pessoas;
+public class Vetor<T> {
+    private Object[] elementos;
 
     public Vetor(int tamanho) {
-        this.pessoas = new Pessoa[tamanho];
+        this.elementos = new Object[tamanho];
     }
 
-    public void inserirEm(int pos, Pessoa p){
-        this.pessoas[pos]=p;
+    public void inserirEm(int pos, T elemento){
+        this.elementos[pos]=elemento;
     }
 
-    public Pessoa recuperar(int pos){
-        return this.pessoas[pos];
+    public T recuperar(int pos){
+        return (T)this.elementos[pos];
     }
 }
