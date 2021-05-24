@@ -3,6 +3,7 @@ package main;
 import models.Pessoa;
 
 import javax.swing.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args){
@@ -13,14 +14,18 @@ public class Main {
         do{
             String menu =
                     "1-Fazer gerenciamento de memória;\n" +
-                    "0-Sair"
+                    "2-Estudo de vetores\n"+
+                    "0-Sair";
 
-                    ;
             String strx = JOptionPane.showInputDialog(null,menu);
             x=Integer.parseInt(strx);
             switch(x){
                 case 1:
                     gerenciamentoDeMemoria();
+                    break;
+                case 2:
+                    int tamanho = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o tamanho do vetor de pessoas que desejas criar."));
+                    vetores(tamanho);
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
@@ -81,5 +86,18 @@ public class Main {
 
 
 
+    }
+
+    private static void vetores(int tamanho){
+        JOptionPane.showMessageDialog(null,"Neste momento o software criou um vetor com "+tamanho+" posições");
+        Pessoa[] vetorPessoas = new Pessoa[tamanho];
+        StringBuilder list = new StringBuilder();
+        for(int i=0;i<vetorPessoas.length;i++) {
+            String nome = JOptionPane.showInputDialog(null, "Digite um nome para a pessoa " + i);
+            int id = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um id para a pessoa " + i));
+            vetorPessoas[i] = new Pessoa(id, nome);
+            list.append("Pessoa "+i+"->  Nome: "+vetorPessoas[i].getNome()+" id: "+vetorPessoas[i].getId()+"\n");
+        }
+        JOptionPane.showMessageDialog(null,list.toString());
     }
 }
