@@ -1,6 +1,7 @@
 package main;
 
 import models.Pessoa;
+import vetores.Vetor;
 
 import javax.swing.*;
 import java.util.Arrays;
@@ -90,13 +91,17 @@ public class Main {
 
     private static void vetores(int tamanho){
         JOptionPane.showMessageDialog(null,"Neste momento o software criou um vetor com "+tamanho+" posições");
-        Pessoa[] vetorPessoas = new Pessoa[tamanho];
+        Vetor vetorPessoas = new Vetor(tamanho);
         StringBuilder list = new StringBuilder();
-        for(int i=0;i<vetorPessoas.length;i++) {
-            String nome = JOptionPane.showInputDialog(null, "Digite um nome para a pessoa " + i);
-            int id = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um id para a pessoa " + i));
-            vetorPessoas[i] = new Pessoa(id, nome);
-            list.append("Pessoa "+i+"->  Nome: "+vetorPessoas[i].getNome()+" id: "+vetorPessoas[i].getId()+"\n");
+        for(int i=0;i<tamanho;i++){
+
+            String nome = JOptionPane.showInputDialog(null,"Digte o nome da pessoa "+i);
+            int id=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+i));
+            Pessoa p = new Pessoa(id,nome);
+            vetorPessoas.inserirEm(i,p);
+        }
+        for(int i=0;i<tamanho;i++){
+            list.append("Pessoa "+i+" ->"+" Nome: "+ vetorPessoas.recuperar(i).getNome()+" id: "+ vetorPessoas.recuperar(i).getId()+"\n");
         }
         JOptionPane.showMessageDialog(null,list.toString());
     }
