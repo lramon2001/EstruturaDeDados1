@@ -41,16 +41,16 @@ de Reference-Types são classes, objetos, matrizes, indexadores, interfaces etc.
 ## Arrays / Vetores
 ```
 Um array é uma estrutura de dados que armazena uma coleção de elementos de tal forma que cada um dos elementos possa ser 
-identificado por, pelo menos, um índice ou uma chave. Essa estrutura de dados também é conhecida como variável indexada, vetor
-(para arranjos unidimensionais) e matriz (para arranjos bidimensionais). Os arranjos mantêm uma série de elementos de dados, geralmente 
-do mesmo tamanho e tipo de dados. Elementos individuais são acessados por sua posição no arranjo. A posição é dada por um índice, também
-chamado de subscrição. O índice geralmente utiliza uma sequência de números inteiros, mas o índice pode ter qualquer valor ordinal. Os 
-arranjos podem ser multidimensionais, significando que eles são indexados por um número fixo de números inteiros, por exemplo, por uma sequência 
-(ou sucessão) finita de quatro números inteiros. Geralmente, arranjos unidimensionais e bidimensionais são os mais comuns.
-
-Os arrays podem ser considerados como as estruturas de dados mais simples. Têm a vantagem de que os seus elementos são acessíveis de forma rápida 
-mas têm uma notável limitação: são de tamanho fixo, mas podem ser incrementados ou diminuídos com determinados algoritmos, geralmente envolvendo 
-a cópia de elementos de um arranjo para outro e reiniciar o original com a nova dimensão. 
+identificado por, pelo menos, um índice ou uma chave. Essa estrutura de dados também é conhecida como variável indexada,
+vetor (para arranjos unidimensionais) e matriz (para arranjos bidimensionais). Os arranjos mantêm uma série de elementos 
+de dados, geralmente do mesmo tamanho e tipo de dados. Elementos individuais são acessados por sua posição no arranjo. A 
+posição é dada por um índice, também chamado de subscrição. O índice geralmente utiliza uma sequência de números inteiros,
+mas o índice pode ter qualquer valor ordinal. Os arranjos podem ser multidimensionais, significando que eles são indexados
+por um número fixo de números inteiros, por exemplo, por uma sequência (ou sucessão) finita de quatro números inteiros.
+Geralmente, arranjos unidimensionais e bidimensionais são os mais comuns. Os arrays podem ser considerados como as 
+estruturas de dados mais simples. Têm a vantagem de que os seus elementos são acessíveis de forma rápida mas têm uma 
+notável limitação: são de tamanho fixo, mas podem ser incrementados ou diminuídos com determinados algoritmos, geralmente
+envolvendo a cópia de elementos de um arranjo para outro e reiniciar o original com a nova dimensão. 
 ```
 ## History / História
 - See [Commit changes](https://github.com/lramon2001/Algoritmos/pulse) for details.
