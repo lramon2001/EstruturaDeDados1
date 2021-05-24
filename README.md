@@ -13,11 +13,6 @@
 - pointers,equals method and hashcode / Ponteiros, métodos equals e hashcode.
 
 
-## History / História
-- See [Commit changes](https://github.com/lramon2001/Algoritmos/pulse) for details.
-
-> **Consulte [Mudanças de commit](https://github.com/lramon2001/Algoritmos/pulse) para obter detalhes.**
-
 ## Memory management / Gerenciamento de memória
 ![imagem](https://github.com/lramon2001/EstruturaDeDados1/blob/main/reference-type.png)
 ```
@@ -35,6 +30,11 @@ local do heap que o valor original. Variáveis Reference-Types são armazenadas 
 Isso significa que quando uma variável Reference-Type não é mais usada, ela pode ser marcada para coleta de lixo. Exemplos 
 de Reference-Types são classes, objetos, matrizes, indexadores, interfaces etc.
 ```
+
+## History / História
+- See [Commit changes](https://github.com/lramon2001/Algoritmos/pulse) for details.
+
+> **Consulte [Mudanças de commit](https://github.com/lramon2001/Algoritmos/pulse) para obter detalhes.**
 
 ## License / Licença
 
