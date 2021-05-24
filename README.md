@@ -19,6 +19,7 @@
 > **Consulte [Mudanças de commit](https://github.com/lramon2001/Algoritmos/pulse) para obter detalhes.**
 
 ## Memory management / Gerenciamento de memória
+![imagem](https://github.com/lramon2001/EstruturaDeDados1/blob/main/reference-type.png)
 ```
 Um Value-Type armazena seu conteúdo na memória alocada na stack. Quando você cria um Value-Type, 
 um único espaço na memória é alocado para armazenar o valor e essa variável contém diretamente um valor. 
