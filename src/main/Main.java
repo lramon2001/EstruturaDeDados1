@@ -91,7 +91,28 @@ public class Main {
     }
 
     private static void vetores(int tamanho) throws IllegalAccessException {
-
+           Vetor<Pessoa> vetor = new Vetor<Pessoa>();
+           JOptionPane.showMessageDialog(null,"Seja bem vindo ao estudo de vetores. Preciso que você \n" +
+                                                                    "Cadastre 4 pessoas para contuarmos o estudo");
+           for(int i=0;i<vetor.tamanho();i++){
+               Pessoa pessoa = new Pessoa();
+               String nome = JOptionPane.showInputDialog(null,"Digite o nome da pessoa "+i);
+               int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa"+i));
+               pessoa.setNome(nome);
+               pessoa.setId(id);
+               vetor.inserir(pessoa);
+           }
+           Pessoa renato = new Pessoa(29,"Renato Russo");
+           vetor.inserirEm(1,renato);
+           JOptionPane.showMessageDialog(null,
+                   "Você nem percebeu, mas o software adicionou uma pessoa a lista \n" +
+                           "O nome dele é Renato Russo e o id dele é 29 ");
+           StringBuilder lista = new StringBuilder();
+           lista.append("Lista de pessoas\n");
+           for(int i=0;i<vetor.tamanho();i++){
+               lista.append(vetor.recuperar(i).getId()+" "+vetor.recuperar(i).getNome());
+               lista.append("\n");
+           }
     }
 
 }
