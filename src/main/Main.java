@@ -99,7 +99,7 @@ public class Main {
         Vetor<Pessoa>vetorPessoas = new Vetor<Pessoa>(tamanho);
         StringBuilder list = new StringBuilder();
         int pos=0;
-        for(int i=0;i<tamanho;i++){
+        for(int i=0;i<vetorPessoas.tamanho();i++){
             String nome = JOptionPane.showInputDialog(null,"Digte o nome da pessoa "+i);
             int id=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+i));
             Pessoa p = new Pessoa(id,nome);

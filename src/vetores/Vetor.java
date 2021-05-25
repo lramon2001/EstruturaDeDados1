@@ -46,6 +46,7 @@ public class Vetor<T> {
         }
 
     }
+
     public void inserir(T elemento){
         if(this.posicao>=this.elementos.length){
             this.elementos= Arrays.copyOf(this.elementos,this.elementos.length+1);
@@ -54,7 +55,15 @@ public class Vetor<T> {
         this.posicao++;
     }
 
-    public T recuperar(int pos){
+    public T recuperar(int pos) throws IllegalAccessException {
+        if(pos>=tamanho()){
+            throw new IllegalAccessException(String.format("Posição inválida [%d]",pos));
+        }
         return (T)this.elementos[pos];
     }
+    public int tamanho(){
+        return this.elementos.length;
+    }
+
+
 }
