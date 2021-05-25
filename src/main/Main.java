@@ -16,7 +16,6 @@ public class Main {
             String menu =
                     "1-Fazer gerenciamento de memória;\n" +
                     "2-Estudo de vetores\n"+
-                    "3-Usar o vetor que cria novas posições\n"+
                     "0-Sair";
 
             String strx = JOptionPane.showInputDialog(null,menu);
@@ -92,6 +91,7 @@ public class Main {
     }
 
     private static void vetores(int tamanho) throws IllegalAccessException {
+
     }
 
 }
