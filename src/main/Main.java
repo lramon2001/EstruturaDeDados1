@@ -122,6 +122,18 @@ public class Main {
         }
 
         JOptionPane.showMessageDialog(null,listInteger.toString());
+        JOptionPane.showMessageDialog(null,"Agora vamos testar se o método contém está funcionando");
+        Pessoa pa =new Pessoa(1,"Slash");
+        vetorPessoas.inserir(pa);
+        Pessoa pb = new Pessoa(4,"Axl");
+        JOptionPane.showMessageDialog(null,"Se a resposta for true, então tá tudo certo!\n"+vetorPessoas.contem(pa));
+        JOptionPane.showMessageDialog(null,"Se a resposta agora for false bom também!\n"+vetorPessoas.contem(pb));
+        Pessoa pc = new Pessoa(60,"Duff");
+        vetorPessoas.inserirEm(0,pc);
+        Pessoa pd = new Pessoa(738,"Michael Jackson");
+        JOptionPane.showMessageDialog(null,"Agora vamos testar se o método indice está funcionando");
+        JOptionPane.showMessageDialog(null,"Se a resposta for zero, estamos no caminho correto.\n"+vetorPessoas.indice(pc));
+        JOptionPane.showMessageDialog(null,"Se a resposta for -1, é mais uma felicidade para nós =-)\n"+vetorPessoas.indice(pd));
 
     }
     public static void vetoresQueCrescem() throws IllegalAccessException {

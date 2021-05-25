@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Pessoa {
     private int id;
     private String nome;
@@ -27,6 +29,8 @@ public class Pessoa {
     public void setId(int id) {
         this.id = id;
     }
+
+
 
     @Override
     public String toString() {

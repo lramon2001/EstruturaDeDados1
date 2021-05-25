@@ -4,6 +4,7 @@ import models.Pessoa;
 
 import java.sql.Array;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Vetor<T> {
     private Object[] elementos;
@@ -61,7 +62,27 @@ public class Vetor<T> {
         }
         return (T)this.elementos[pos];
     }
+    public boolean contem (T entidade) throws IllegalAccessException {
+
+        for(int i=0;i<tamanho();i++){
+            if(recuperar(i)!=null &&recuperar(i).equals(entidade)){
+                return true;
+            }
+        }
+       return false;
+
+    }
+    public int indice(T elemento) throws IllegalAccessException {
+        for(int i=0;i<tamanho();i++){
+            if(recuperar(i)!=null && recuperar(i).equals(elemento)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public int tamanho(){
+
         return this.elementos.length;
     }
 
