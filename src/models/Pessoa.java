@@ -30,9 +30,9 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                '}';
+        return
+                "id= " + id +
+                ", nome= " + nome
+                +"\n";
     }
 }

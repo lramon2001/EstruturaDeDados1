@@ -7,10 +7,10 @@ import javax.swing.*;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IllegalAccessException {
        menu();
     }
-    private static void menu(){
+    private static void menu() throws IllegalAccessException {
         int x;
         do{
             String menu =
@@ -38,6 +38,8 @@ public class Main {
                     while(loop!=0){
                         loop=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite 0 para sair do loop\n E qualquer numero inteiro para continuar."));
                         if(loop==0){
+                            Pessoa p5 = new Pessoa(67,"Péle");
+                            pessoas.inserirEm(1,p5);
                             break;
                         }
                         Pessoa p2 = new Pessoa();
@@ -46,9 +48,9 @@ public class Main {
                         p2.setNome(nome);
                         p2.setId(id);
                         pessoas.inserir(p2);
-                        listaPessoas.append("Id: "+p2.getId()+", Nome: "+p2.getNome()+";\n");
                     }
-                    JOptionPane.showMessageDialog(null,listaPessoas.toString());
+
+                    JOptionPane.showMessageDialog(null,pessoas.toString());
                     break;
 
                 default:
@@ -112,7 +114,7 @@ public class Main {
 
     }
 
-    private static void vetores(int tamanho){
+    private static void vetores(int tamanho) throws IllegalAccessException {
         JOptionPane.showMessageDialog(null,"Neste momento o software criou um vetor de pessoas com "+tamanho+" posições");
         Vetor<Pessoa>vetorPessoas = new Vetor<Pessoa>(tamanho);
         StringBuilder list = new StringBuilder();
