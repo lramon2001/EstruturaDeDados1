@@ -22,10 +22,32 @@ public class Vetor<T> {
     @Override
     public String toString() {
         String informacao ="";
-        for(int i=0;i< this.elementos.length;i++){
+        for(int i=0;i< this.tamanho();i++){
            informacao+= elementos[i].toString();
         }
         return informacao;
+    }
+
+    public void remover(int pos){
+        if(pos>=tamanho()){
+            throw new IllegalArgumentException(String.format("A posição [%d] é invalida",pos));
+        }
+        Object[] ArrayIncio = Arrays.copyOfRange(this.elementos,0,pos);
+        Object[] ArrayFinal = Arrays.copyOfRange(this.elementos,pos+1,this.tamanho());
+        this.elementos=new Object[tamanho()-1];
+        this.posicao--;
+        System.arraycopy(ArrayIncio,0,this.elementos,0,ArrayIncio.length);
+        System.arraycopy(ArrayFinal,0,this.elementos,ArrayIncio.length,ArrayFinal.length);
+
+    }
+
+    public void remover(T elemento) throws IllegalAccessException, IllegalArgumentException {
+        if(indice(elemento)>=tamanho()|| indice(elemento)==-1){
+            throw new IllegalArgumentException(String.format("O índice [%d] é inválido",indice(elemento)));
+        }
+        else{
+            remover(indice(elemento));
+        }
     }
 
     public void inserirEm(int posicao, T elemento) throws IllegalAccessException {
@@ -41,9 +63,11 @@ public class Vetor<T> {
             this.elementos=new Object[novoTamanho];
             System.arraycopy(arrayInicio,0,this.elementos,0,arrayInicio.length);
             System.arraycopy(arrayFinal,0,this.elementos,arrayInicio.length,arrayFinal.length);
+            this.posicao++;
         }
         else{
             this.elementos[posicao]=elemento;
+            this.posicao++;
         }
 
     }

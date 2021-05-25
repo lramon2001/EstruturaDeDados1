@@ -29,9 +29,6 @@ public class Main {
                     int tamanho = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o tamanho do vetor de pessoas que desejas criar."));
                     vetores(tamanho);
                     break;
-                case 3:
-                    vetoresQueCrescem();
-                    break;
 
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
@@ -95,68 +92,6 @@ public class Main {
     }
 
     private static void vetores(int tamanho) throws IllegalAccessException {
-        JOptionPane.showMessageDialog(null,"Neste momento o software criou um vetor de pessoas com "+tamanho+" posições");
-        Vetor<Pessoa>vetorPessoas = new Vetor<Pessoa>(tamanho);
-        StringBuilder list = new StringBuilder();
-        int pos=0;
-        for(int i=0;i<vetorPessoas.tamanho();i++){
-            String nome = JOptionPane.showInputDialog(null,"Digte o nome da pessoa "+i);
-            int id=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+i));
-            Pessoa p = new Pessoa(id,nome);
-            vetorPessoas.inserirEm(i,p);
-            pos++;
-        }
-        for(int i=0;i<tamanho;i++){
-            list.append("Pessoa "+i+" ->"+" Nome: "+ vetorPessoas.recuperar(i).getNome()+" id: "+ vetorPessoas.recuperar(i).getId()+"\n");
-        }
-        JOptionPane.showMessageDialog(null,list.toString());
-        JOptionPane.showMessageDialog(null,"O nosso vetor é genérico, desta forma vamos adcionar inteiros ao vetor.");
-        tamanho=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o tamanho do vetor de inteiros "));
-        Vetor<Integer> vetorDeInteiros = new Vetor<Integer>(tamanho);
-        StringBuilder listInteger = new StringBuilder();
-        listInteger.append("Vetor de inteiros que você escolheu: \n");
-        for(int i=0;i<tamanho;i++){
-            int numero = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite um número a ser adicionado"));
-            vetorDeInteiros.inserirEm(i,numero);
-            listInteger.append(vetorDeInteiros.recuperar(i)+"\n");
-        }
-
-        JOptionPane.showMessageDialog(null,listInteger.toString());
-        JOptionPane.showMessageDialog(null,"Agora vamos testar se o método contém está funcionando");
-        Pessoa pa =new Pessoa(1,"Slash");
-        vetorPessoas.inserir(pa);
-        Pessoa pb = new Pessoa(4,"Axl");
-        JOptionPane.showMessageDialog(null,"Se a resposta for true, então tá tudo certo!\n"+vetorPessoas.contem(pa));
-        JOptionPane.showMessageDialog(null,"Se a resposta agora for false bom também!\n"+vetorPessoas.contem(pb));
-        Pessoa pc = new Pessoa(60,"Duff");
-        vetorPessoas.inserirEm(0,pc);
-        Pessoa pd = new Pessoa(738,"Michael Jackson");
-        JOptionPane.showMessageDialog(null,"Agora vamos testar se o método indice está funcionando");
-        JOptionPane.showMessageDialog(null,"Se a resposta for zero, estamos no caminho correto.\n"+vetorPessoas.indice(pc));
-        JOptionPane.showMessageDialog(null,"Se a resposta for -1, é mais uma felicidade para nós =-)\n"+vetorPessoas.indice(pd));
-
     }
-    public static void vetoresQueCrescem() throws IllegalAccessException {
-        Vetor<Pessoa> pessoas = new Vetor<Pessoa>();
-        StringBuilder listaPessoas = new StringBuilder();
-        int loop =1;
-        listaPessoas.append("Lista das pessoas\n");
 
-        while(loop!=0){
-            loop=Integer.parseInt(JOptionPane.showInputDialog(null,"Digite 0 para sair do loop\n E qualquer numero inteiro para continuar."));
-            if(loop==0){
-                Pessoa p5 = new Pessoa(67,"Péle");
-                pessoas.inserirEm(1,p5);
-                break;
-            }
-            Pessoa p2 = new Pessoa();
-            String nome=JOptionPane.showInputDialog(null,"Digite o nome da pessoa que desejas adicionar ao vetor de pessoas");
-            int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa que desejas adicionar ao vetor de pessoas"));
-            p2.setNome(nome);
-            p2.setId(id);
-            pessoas.inserir(p2);
-        }
-
-        JOptionPane.showMessageDialog(null,pessoas.toString());
-    }
 }
