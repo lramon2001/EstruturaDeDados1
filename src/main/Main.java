@@ -25,8 +25,8 @@ public class Main {
                     gerenciamentoDeMemoria();
                     break;
                 case 2:
-                    int tamanho = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o tamanho do vetor de pessoas que desejas criar."));
-                    vetores(tamanho);
+
+                    vetores();
                     break;
 
                 default:
@@ -90,14 +90,14 @@ public class Main {
 
     }
 
-    private static void vetores(int tamanho) throws IllegalAccessException {
+    private static void vetores( ) throws IllegalAccessException {
            Vetor<Pessoa> vetor = new Vetor<Pessoa>();
            JOptionPane.showMessageDialog(null,"Seja bem vindo ao estudo de vetores. Preciso que você \n" +
-                                                                    "Cadastre 4 pessoas para contuarmos o estudo");
+                                                                    "Cadastre 3 pessoas para contuarmos o estudo");
            for(int i=0;i<vetor.tamanho();i++){
                Pessoa pessoa = new Pessoa();
-               String nome = JOptionPane.showInputDialog(null,"Digite o nome da pessoa "+i);
-               int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa"+i));
+               String nome = JOptionPane.showInputDialog(null,"Digite o nome da pessoa "+(i+1));
+               int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+(i+1)));
                pessoa.setNome(nome);
                pessoa.setId(id);
                vetor.inserir(pessoa);
@@ -105,14 +105,47 @@ public class Main {
            Pessoa renato = new Pessoa(29,"Renato Russo");
            vetor.inserirEm(1,renato);
            JOptionPane.showMessageDialog(null,
-                   "Você nem percebeu, mas o software adicionou uma pessoa a lista \n" +
+                   "Você nem percebeu, mas o software adicionou uma pessoa ao vetor na posição 1 \n" +
                            "O nome dele é Renato Russo e o id dele é 29 ");
            StringBuilder lista = new StringBuilder();
            lista.append("Lista de pessoas\n");
            for(int i=0;i<vetor.tamanho();i++){
-               lista.append(vetor.recuperar(i).getId()+" "+vetor.recuperar(i).getNome());
+               lista.append("posição-> "+i+" nome: "+vetor.recuperar(i).getNome()+" id: "+vetor.recuperar(i).getId());
                lista.append("\n");
            }
+           JOptionPane.showMessageDialog(null,lista.toString());
+
+           Pessoa x = vetor.recuperar(1);
+           Pessoa humberto = new Pessoa(160,"Humberto Gessinger");
+
+           JOptionPane.showMessageDialog(null,"Agora o software criou dois novos objetos" +
+                   "\n Um  é idêntico a pessoa 2 que vc cadastrou e outro é o Humberto Gessinger, id: 160" +
+                   "\n Fizemos isto para testar as funções contem(),indice() e remover.");
+        JOptionPane.showMessageDialog(null,"Software, objeto que o usuário cadastrou como pessoa 2 está na vetor?\n"+"Resposta: "+
+                vetor.contem(x));
+        JOptionPane.showMessageDialog(null,"Software, o Humberto Gessinger que não foi cadastrado está no vetor?\n"+"Resposta: "+
+                vetor.contem(humberto));
+           lista.delete(0,lista.length());
+        JOptionPane.showMessageDialog(null,"Agora vamos testar a função indice()");
+        JOptionPane.showMessageDialog(null ,"A posição do Renato Russo "+vetor.indice(renato));
+
+        for(int i=0;i<vetor.tamanho();i++){
+            lista.append("posição-> "+i+" nome: "+vetor.recuperar(i).getNome()+" id: "+vetor.recuperar(i).getId());
+            lista.append("\n");
+        }
+        JOptionPane.showMessageDialog(null,"Agora vamos remover a primeira pessoa do vetor.");
+        vetor.remover(0);
+        JOptionPane.showMessageDialog(null,"Agora vamos remover o Renato Russo do vetor\n" +
+                "mas Legião Urbana é muito bom !!!");
+        vetor.remover(renato);
+        lista.delete(0,lista.length());
+        for(int i=0;i< vetor.tamanho();i++){
+            lista.append("posição-> "+i+" nome: "+vetor.recuperar(i).getNome()+" id: "+vetor.recuperar(i).getId());
+            lista.append("\n");
+        }
+        JOptionPane.showMessageDialog(null,lista.toString());
+        JOptionPane.showMessageDialog(null,"Juntos fizemos uma estrutura de Dados muito famosa: o Vetor\n" +
+                "Obrigado pela ajuda,camarada!!!");
     }
 
 }
