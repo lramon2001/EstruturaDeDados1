@@ -64,6 +64,7 @@ notável limitação: são de tamanho fixo, mas podem ser incrementados ou dimin
 envolvendo a cópia de elementos de um arranjo para outro e reiniciar o original com a nova dimensão. 
 ```
 ## Linked Lists / Listas Ligadas
+![gif](https://github.com/lramon2001/EstruturaDeDados1/blob/main/listasLigadas.gif)
 ```
 Uma lista encadeada ou lista ligada é uma estrutura de dados linear e dinâmica. Ela é composta por várias células que estão
 interligadas através de ponteiros, ou seja, cada célula possui um ponteiro que aponta para o endereço de memória da próxima 
