@@ -21,6 +21,16 @@
 - Adding the features contains () and index () / Adicionando as funcionalidades contém() e índice();
 - Adding element removal functionality / Adicionando a funcionalidade de remoção de elementos.
 
+### Linked Lists / Listas Ligadas
+- Definition of linked lists / Definição de listas ligadas;
+- Creating a generic representation for a node / Criando uma representação genérica para um nó;
+- Creating the basic structure of a linked list / Criando a estrutura básica de uma lista ligada;
+- Creating the functionalities of insertion, return of size and verification of the existence of nodes / Criando as funcionalidades de inserção, de retorno do tamanho e de         verificação de existência de nós;
+- Creating functionalities in a position and recovering nodes / Criando as funcionalidades em uma posição e de recuperação de nós;
+- Implementing the methods contain() and index() / Implementando os métodos contem() e indice();
+- Implementing removal features / Implementando as funcionalidades de remoção;
+- Getting to know the LinkedList class / Conhecendo a classe LinkedList.
+
 ## Memory management / Gerenciamento de memória
 ![imagem](https://github.com/lramon2001/EstruturaDeDados1/blob/main/reference-type.png)
 ```
@@ -53,6 +63,15 @@ estruturas de dados mais simples. Têm a vantagem de que os seus elementos são 
 notável limitação: são de tamanho fixo, mas podem ser incrementados ou diminuídos com determinados algoritmos, geralmente
 envolvendo a cópia de elementos de um arranjo para outro e reiniciar o original com a nova dimensão. 
 ```
+## Linked Lists / Listas Ligadas
+```
+Uma lista encadeada ou lista ligada é uma estrutura de dados linear e dinâmica. Ela é composta por várias células que estão
+interligadas através de ponteiros, ou seja, cada célula possui um ponteiro que aponta para o endereço de memória da próxima 
+célula. Desse modo, as células da estrutura não precisam estar em posições contíguas da memória. Isso faz com que a estrutura
+se torne dinâmica, pois há qualquer momento, é possível alocar uma nova célula e mudar os ponteiros das células já 
+existentes, de modo que a nova célula seja inserida na estrutura com êxito, na posição desejada pelo programador.
+```
+
 ## History / História
 - See [Commit changes](https://github.com/lramon2001/Algoritmos/pulse) for details.
 
