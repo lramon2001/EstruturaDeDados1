@@ -1,5 +1,6 @@
 package main;
 
+import listasLigadas.ListaLigada;
 import models.Pessoa;
 import vetores.Vetor;
 
@@ -16,6 +17,7 @@ public class Main {
             String menu =
                     "1-Fazer gerenciamento de memória;\n" +
                     "2-Estudo de vetores\n"+
+                    "3-Estudo de listas encadeadas\n"+
                     "0-Sair";
 
             String strx = JOptionPane.showInputDialog(null,menu);
@@ -28,7 +30,9 @@ public class Main {
 
                     vetores();
                     break;
-
+                case 3:
+                    listaLigada();
+                    break;
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
                     break;
@@ -146,6 +150,21 @@ public class Main {
         JOptionPane.showMessageDialog(null,lista.toString());
         JOptionPane.showMessageDialog(null,"Juntos fizemos uma estrutura de Dados muito famosa: o Vetor\n" +
                 "Obrigado pela ajuda,camarada!!!");
+    }
+
+    private static void listaLigada(){
+        ListaLigada<Pessoa> pessoas = new ListaLigada<Pessoa>();
+        JOptionPane.showMessageDialog(null,"Seja bem vindo ao estudo das listas ligadas \n" +
+                "Agora preciso que casdastre 4 pessoas para testarmos a nossa lista encadeada.");
+        for(int i=0;i<4;i++){
+            Pessoa pessoa = new Pessoa();
+            String nome =JOptionPane.showInputDialog(null,"Digite o nome da pessoa "+(i+1));
+            int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+(i+1)));
+            pessoa.setNome(nome);
+            pessoa.setId(id);
+            pessoas.inserir(pessoa);
+        }
+        JOptionPane.showMessageDialog(null,pessoas.toString());
     }
 
 }
