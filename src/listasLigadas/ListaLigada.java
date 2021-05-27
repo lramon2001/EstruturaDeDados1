@@ -29,6 +29,16 @@ public class ListaLigada<T> {
     public int tamanho(){
         return this.tamanho;
     }
+    public boolean contem (T elemento){
+        for(int i=0;i<tamanho();i++){
+            No<T> no = recuperarNo(i);
+            if(no.getElemento()!=null && no.getElemento().equals(elemento)){
+                return true;
+            }
+
+        }
+        return false;
+    }
     public void inserirEm(int posicao, T elemento){
         if(posicao==0){
             No<T> novoNo = new No<T>(elemento);
@@ -68,6 +78,9 @@ public class ListaLigada<T> {
             }
             return noAtual;
         }
+    }
+    public T recuperar(int pos){
+        return recuperarNo(pos).getElemento();
     }
 
     @Override

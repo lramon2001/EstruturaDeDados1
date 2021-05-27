@@ -164,7 +164,15 @@ public class Main {
             pessoa.setId(id);
             pessoas.inserir(pessoa);
         }
+        Pessoa aleatoria = new Pessoa(1111,"Michael Jackson");
         JOptionPane.showMessageDialog(null,pessoas.toString());
+        JOptionPane.showMessageDialog(null,"Agora veremos se os métodos contem() e indice estão funcionado.");
+        JOptionPane.showMessageDialog(null,"Software, a segunda pessoa que o usuário cadastrou está no vetor?\n"+pessoas.contem(pessoas.recuperar(1)));
+        JOptionPane.showMessageDialog(null,"Você nem percebeu, mas o software criou uma pessoa chamada Michael Jackson.\n" +
+                "Mas ele não foi adcionado à lista");
+        JOptionPane.showMessageDialog(null,"Software, o Michael Jackson está na lista?\n"+pessoas.contem(aleatoria));
+
+
     }
 
 }
