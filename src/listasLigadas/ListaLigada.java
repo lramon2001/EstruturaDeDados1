@@ -83,7 +83,28 @@ public class ListaLigada<T> {
         return recuperarNo(pos).getElemento();
     }
     public void remover(int pos){
+        if(pos>=tamanho()){
+            throw new IllegalArgumentException();
+        }
+        else if(pos==0){
+            No<T> novoPrimeiro = this.primeiroNo.getProximo();
+            this.primeiroNo.setProximo(null);
+            this.primeiroNo= novoPrimeiro;
+        }
+        else if(pos==tamanho()-1){
+            No<T> novoUltimo = recuperarNo(tamanho()-2);
+            novoUltimo.setProximo(null);
+            this.ultimoNo=novoUltimo;
+        }
+        else{
+            No<T> noRemovido = recuperarNo(pos);
+            No<T> noAnterior = recuperarNo(pos-1);
+            No<T> noPosterior = recuperarNo(pos+1);
+            noAnterior.setProximo(noPosterior);
+            noRemovido.setProximo(null);
 
+        }
+        this.tamanho--;
     }
     public void remover (T elemento){
 
