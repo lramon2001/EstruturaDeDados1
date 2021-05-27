@@ -82,7 +82,12 @@ public class ListaLigada<T> {
     public T recuperar(int pos){
         return recuperarNo(pos).getElemento();
     }
+    public void remover(int pos){
 
+    }
+    public void remover (T elemento){
+
+    }
     @Override
     public String toString() {
         if(estaVazia()){
