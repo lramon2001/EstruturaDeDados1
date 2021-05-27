@@ -107,7 +107,21 @@ public class ListaLigada<T> {
         this.tamanho--;
     }
     public void remover (T elemento){
+        int pos=indice(elemento);
+        if(pos!=-1){
+           throw new IllegalArgumentException("Elemento inválido!");
+        }
+        remover(pos);
 
+    }
+    public int indice(T elemento){
+        for(int i=0;i<tamanho();i++){
+            No<T> atual = recuperarNo(i);
+            if(atual.getElemento()!=null && atual.getElemento().equals(atual)){
+                return i;
+            }
+        }
+        return -1;
     }
     @Override
     public String toString() {
