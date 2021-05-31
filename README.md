@@ -42,6 +42,9 @@
 - Implementing the stacking and checking the existence of nodes functionality / Implementando as funcionalidades de empilhamento e de verificação de existênica de nós;
 - Implementing the destacking functionality / Implementando a funcionalidade de desempilhamento;
 
+### Rows / Filas
+- Basic concept / Conceito básico;
+- Implementing queuing, dequeuing, and node presence checking features / Implementando as funcionalidades de enfileiramento, desenfileiramento e verificação de presença de nós.
 
 
 ## Memory management / Gerenciamento de memória
