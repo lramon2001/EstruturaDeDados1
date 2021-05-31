@@ -31,6 +31,12 @@
 - Implementing removal features / Implementando as funcionalidades de remoção;
 - Getting to know the LinkedList class / Conhecendo a classe LinkedList.
 
+### Doubly Linked List / Lista Duplamente Ligada
+- Definition of doubly linked lists / Definição de listas duplamentes ligadas;
+- Basic concepts and implementations / Conceitos e implementações básicas;
+- Modifying the removal methods / Modificando os métodos de remoção;
+- Testing the doubly linked list / Testando a lista duplamente ligada. 
+
 ## Memory management / Gerenciamento de memória
 ![imagem](https://github.com/lramon2001/EstruturaDeDados1/blob/main/reference-type.png)
 ```
@@ -71,6 +77,18 @@ interligadas através de ponteiros, ou seja, cada célula possui um ponteiro que
 célula. Desse modo, as células da estrutura não precisam estar em posições contíguas da memória. Isso faz com que a estrutura
 se torne dinâmica, pois há qualquer momento, é possível alocar uma nova célula e mudar os ponteiros das células já 
 existentes, de modo que a nova célula seja inserida na estrutura com êxito, na posição desejada pelo programador.
+```
+## Doubly Linked List / Lista Duplamente Ligada
+![gif](https://github.com/lramon2001/EstruturaDeDados1/blob/main/listaDuplamenteLigadas.gif)
+```
+Em ciência da computação, uma lista duplamente ligada (ou lista duplamente encadeada) é uma estrutura de dados ligada que 
+consiste de um conjunto de registros sequencialmente ligados chamados de nós e é uma extensão da lista simplesmente ligada
+(ou lista simplesmente encadeada). Cada nó contem dois campos, chamados de links ou enlaces, que são referências para o nó
+anterior e para o nó posterior na sequência de nós. Os links anteriores e posteriores dos nós inicial e final, respectivamente,
+apontam para algum tipo de terminador, tipicamente um nó sentinela ou nulo, para facilitar o percorrimento da lista. Se houver 
+apenas um nó sentinela, a lista será vinculada circularmente através do nó sentinela. Ele pode ser conceituado como duas listas
+unicamente vinculadas formadas a partir dos mesmos itens de dados, mas em ordens sequenciais opostas.
+
 ```
 
 ## History / História
