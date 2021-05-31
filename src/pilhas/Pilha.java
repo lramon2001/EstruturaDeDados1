@@ -20,8 +20,8 @@ public class Pilha<T> {
         if(estaVazia()){
             return null;
         }
-        T resultado = lista.recuperar(lista.tamanho()-1);
-        lista.remover(resultado);
+        T resultado = lista.recuperar(this.lista.tamanho()-1);
+        this.lista.remover(this.lista.tamanho()-1);
         return resultado;
     }
 

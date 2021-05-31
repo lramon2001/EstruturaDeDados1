@@ -101,8 +101,8 @@ public class ListaDuplamenteLigada<T> {
         }
         else if(pos==tamanho()-1){
             No<T> novoUltimo = this.ultimoNo.getAnterior();
-            ultimoNo.setAnterior(null);
             novoUltimo.setProximo(null);
+            this.ultimoNo.setAnterior(null);
             this.ultimoNo=novoUltimo;
         }
         else{

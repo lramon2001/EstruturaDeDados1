@@ -3,6 +3,7 @@ package main;
 import listasLigadas.ListaDuplamenteLigada;
 import listasLigadas.ListaLigada;
 import models.Pessoa;
+import pilhas.Pilha;
 import vetores.Vetor;
 
 import javax.swing.*;
@@ -40,6 +41,7 @@ public class Main {
                     listaDuplamenteLigada();
                     break;
                 case 5:
+                    pilha();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
@@ -204,7 +206,28 @@ public class Main {
 
     }
     private static void pilha(){
+        Pilha<Pessoa> pilha = new Pilha<Pessoa>();
+        JOptionPane.showMessageDialog(null,"Seja bem vindo ao estudo das pilhas\n" +
+                "Agora preciso que cadaste três pessoas para testarmos a nossa pilha.");
+        JOptionPane.showMessageDialog(null , "Testando o método estaVazia() antes de você cadastrar as pessoas\n" +
+                "Software, a pilha está vazia?\n" +
+                "R="+pilha.estaVazia());
 
+        for(int i=0;i<4;i++){
+            Pessoa pessoa = new Pessoa();
+            String nome =JOptionPane.showInputDialog(null,"Digite o nome da pessoa "+(i+1));
+            int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+(i+1)));
+            pessoa.setNome(nome);
+            pessoa.setId(id);
+            pilha.empilhar(pessoa);
+        }
+        JOptionPane.showMessageDialog(null , "Testando o método estaVazia() agora que já temos pessoas cadastradas\n" +
+                "Software, a pilha está vazia?\n" +
+                "R="+pilha.estaVazia());
+        JOptionPane.showMessageDialog(null,"Testando o método desempilhar\n");
+
+        JOptionPane.showMessageDialog(null,"Se a nossa implementação estiver correta o software exibirá a última pessoa cadastrada\n" +
+                "Pessoa:\n"+ pilha.desempilhar().getNome());
     }
 
 }
