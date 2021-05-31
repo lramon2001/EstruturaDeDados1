@@ -1,5 +1,6 @@
 package main;
 
+import listasLigadas.ListaDuplamenteLigada;
 import listasLigadas.ListaLigada;
 import models.Pessoa;
 import vetores.Vetor;
@@ -18,6 +19,7 @@ public class Main {
                     "1-Fazer gerenciamento de memória;\n" +
                     "2-Estudo de vetores\n"+
                     "3-Estudo de listas encadeadas\n"+
+                    "4-Estudo de listas duplamente encadeadas\n"+
                     "0-Sair";
 
             String strx = JOptionPane.showInputDialog(null,menu);
@@ -32,6 +34,9 @@ public class Main {
                     break;
                 case 3:
                     listaLigada();
+                    break;
+                case 4:
+                    listaDuplamenteLigada();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
@@ -172,6 +177,27 @@ public class Main {
                 "Mas ele não foi adcionado à lista");
         JOptionPane.showMessageDialog(null,"Software, o Michael Jackson está na lista?\n"+pessoas.contem(aleatoria));
 
+
+    }
+    public static void listaDuplamenteLigada(){
+        ListaDuplamenteLigada<Pessoa> pessoas = new ListaDuplamenteLigada<>();
+        JOptionPane.showMessageDialog(null,"Seja bem vindo ao estudo das listas duplamente ligadas \n" +
+                "Agora preciso que casdastre 4 pessoas para testarmos a nossa lista duplamente encadeada.");
+        for(int i=0;i<4;i++){
+            Pessoa pessoa = new Pessoa();
+            String nome =JOptionPane.showInputDialog(null,"Digite o nome da pessoa "+(i+1));
+            int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+(i+1)));
+            pessoa.setNome(nome);
+            pessoa.setId(id);
+            pessoas.inserir(pessoa);
+        }
+        Pessoa aleatoria = new Pessoa(1111,"Michael Jackson");
+        JOptionPane.showMessageDialog(null,pessoas.toString());
+        JOptionPane.showMessageDialog(null,"Agora veremos se os métodos contem() e indice estão funcionado.");
+        JOptionPane.showMessageDialog(null,"Software, a segunda pessoa que o usuário cadastrou está no vetor?\n"+pessoas.contem(pessoas.recuperar(1)));
+        JOptionPane.showMessageDialog(null,"Você nem percebeu, mas o software criou uma pessoa chamada Michael Jackson.\n" +
+                "Mas ele não foi adcionado à lista");
+        JOptionPane.showMessageDialog(null,"Software, o Michael Jackson está na lista?\n"+pessoas.contem(aleatoria));
 
     }
 
