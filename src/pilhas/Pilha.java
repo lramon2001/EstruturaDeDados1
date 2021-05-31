@@ -16,6 +16,14 @@ public class Pilha<T> {
     public void empilhar(T elemento){
         this.lista.inserir(elemento);
     }
+    public T desempilhar(){
+        if(estaVazia()){
+            return null;
+        }
+        T resultado = lista.recuperar(lista.tamanho()-1);
+        lista.remover(resultado);
+        return resultado;
+    }
 
 
 }

@@ -20,6 +20,7 @@ public class Main {
                     "2-Estudo de vetores\n"+
                     "3-Estudo de listas encadeadas\n"+
                     "4-Estudo de listas duplamente encadeadas\n"+
+                    "5-Estudo de pilhas\n"+
                     "0-Sair";
 
             String strx = JOptionPane.showInputDialog(null,menu);
@@ -37,6 +38,8 @@ public class Main {
                     break;
                 case 4:
                     listaDuplamenteLigada();
+                    break;
+                case 5:
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
@@ -179,7 +182,7 @@ public class Main {
 
 
     }
-    public static void listaDuplamenteLigada(){
+    private static void listaDuplamenteLigada(){
         ListaDuplamenteLigada<Pessoa> pessoas = new ListaDuplamenteLigada<>();
         JOptionPane.showMessageDialog(null,"Seja bem vindo ao estudo das listas duplamente ligadas \n" +
                 "Agora preciso que casdastre 4 pessoas para testarmos a nossa lista duplamente encadeada.");
@@ -198,6 +201,9 @@ public class Main {
         JOptionPane.showMessageDialog(null,"Você nem percebeu, mas o software criou uma pessoa chamada Michael Jackson.\n" +
                 "Mas ele não foi adcionado à lista");
         JOptionPane.showMessageDialog(null,"Software, o Michael Jackson está na lista?\n"+pessoas.contem(aleatoria));
+
+    }
+    private static void pilha(){
 
     }
 
