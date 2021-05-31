@@ -79,6 +79,7 @@ se torne dinâmica, pois há qualquer momento, é possível alocar uma nova cél
 existentes, de modo que a nova célula seja inserida na estrutura com êxito, na posição desejada pelo programador.
 ```
 ## Doubly Linked List / Lista Duplamente Ligada
+![gif](https://github.com/lramon2001/EstruturaDeDados1/blob/main/listaDuplamenteLigadas.gif)
 ```
 Em ciência da computação, uma lista duplamente ligada (ou lista duplamente encadeada) é uma estrutura de dados ligada que 
 consiste de um conjunto de registros sequencialmente ligados chamados de nós e é uma extensão da lista simplesmente ligada
