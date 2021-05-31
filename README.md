@@ -42,7 +42,7 @@
 - Implementing the stacking and checking the existence of nodes functionality / Implementando as funcionalidades de empilhamento e de verificação de existênica de nós;
 - Implementing the destacking functionality / Implementando a funcionalidade de desempilhamento;
 
-### Queue / Filas
+### Queues / Filas
 - Basic concept / Conceito básico;
 - Implementing queuing, dequeuing, and node presence checking features / Implementando as funcionalidades de enfileiramento, desenfileiramento e verificação de presença de nós.
 
@@ -100,7 +100,7 @@ apenas um nó sentinela, a lista será vinculada circularmente através do nó s
 unicamente vinculadas formadas a partir dos mesmos itens de dados, mas em ordens sequenciais opostas.
 
 ```
-### Stacks / Pilhas
+## Stacks / Pilhas
 ![gif](https://github.com/lramon2001/EstruturaDeDados1/blob/main/stack.gif)
 ```
 Pilha ou stack é um tipo especial de lista linear em que todas as operações de inserção e remoção são realizadas pela mesma 
@@ -116,6 +116,21 @@ Uma pilha geralmente suporta 4 operações básicas:
 -PUSH: insere um novo elemento no topo da pilha;
 -POP: remove o elemento do topo da pilha.
 -PULL:altera o elemento posicionado no topo da pilha;
+```
+## Queues / Filas
+```
+A Fila é uma estrutura de dados bastante usada em computação. Na estrutura de fila, os acessos aos elementos também seguem uma regra. 
+O que diferencia a fila da pilha é a ordem de saída dos elementos: enquanto na pilha “o último que entra é o primeiro que sai”, na fila 
+“o primeiro que entra é o primeiro que sai” (a sigla FIFO – first in, first out – é usada para descrever essa estratégia).
+A ideia fundamental da fila é que só podemos inserir um novo elemento no final da fila e só podemos retirar o elemento do início.
+A estrutura de fila é uma analogia natural com o conceito de fila que usamos no nosso dia a dia: quem primeiro entra numa fila é o primeiro
+a ser atendido (a sair da fila). Um exemplo de utilização em computação é a implementação de uma fila de impressão, fila de atendimento, etc. 
+Se uma impressora é compartilhada por várias máquinas, deve-se adotar uma estratégia para determinar que documento será impresso primeiro. 
+A estratégia mais simples é tratar todas as requisições com a mesma prioridade e imprimir os documentos na ordem em que foram submetidos – 
+o primeiro submetido é o primeiro a ser impresso. 
+Para implementar uma fila, devemos ser capazes de inserir novos elementos em uma extremidade, o fim, e retirar elementos da outra extremidade,
+o início. Ou seja, sempre inserimos novos elementos no fim da fila e quando removemos u um elemento ele é retirado do início da fila.
+
 ```
 
 ## History / História
