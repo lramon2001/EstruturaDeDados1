@@ -1,4 +1,17 @@
 package pilhas;
 
-public class Pilha {
+import listasLigadas.ListaDuplamenteLigada;
+
+public class Pilha<T> {
+    private ListaDuplamenteLigada<T> lista;
+
+    public Pilha() {
+        this.lista=new ListaDuplamenteLigada<T>();
+    }
+
+    public boolean estaVazia(){
+        return this.lista.estaVazia();
+    }
+
+
 }
