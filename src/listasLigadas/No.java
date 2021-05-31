@@ -1,6 +1,6 @@
 package listasLigadas;
 
-public class No<T> {
+class No<T> {
 
     private T elemento;
     private No<T> proximo;
