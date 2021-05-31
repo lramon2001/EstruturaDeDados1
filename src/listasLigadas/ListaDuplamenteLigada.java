@@ -87,6 +87,8 @@ public class ListaDuplamenteLigada<T> {
     public T recuperar(int pos){
         return recuperarNo(pos).getElemento();
     }
+
+
     public void remover(int pos){
         if(pos>=tamanho()){
             throw new IllegalArgumentException();
@@ -94,19 +96,23 @@ public class ListaDuplamenteLigada<T> {
         else if(pos==0){
             No<T> novoPrimeiro = this.primeiroNo.getProximo();
             this.primeiroNo.setProximo(null);
+            novoPrimeiro.setAnterior(null);
             this.primeiroNo= novoPrimeiro;
         }
         else if(pos==tamanho()-1){
-            No<T> novoUltimo = recuperarNo(tamanho()-2);
+            No<T> novoUltimo = this.ultimoNo.getAnterior();
+            ultimoNo.setAnterior(null);
             novoUltimo.setProximo(null);
             this.ultimoNo=novoUltimo;
         }
         else{
             No<T> noRemovido = recuperarNo(pos);
-            No<T> noAnterior = recuperarNo(pos-1);
-            No<T> noPosterior = recuperarNo(pos+1);
+            No<T> noAnterior = noRemovido.getAnterior();
+            No<T> noPosterior = noRemovido.getProximo();
             noAnterior.setProximo(noPosterior);
+            noPosterior.setAnterior(noAnterior);
             noRemovido.setProximo(null);
+            noRemovido.setAnterior(null);
 
         }
         this.tamanho--;
