@@ -13,5 +13,9 @@ public class Pilha<T> {
         return this.lista.estaVazia();
     }
 
+    public void empilhar(T elemento){
+        this.lista.inserir(elemento);
+    }
+
 
 }
