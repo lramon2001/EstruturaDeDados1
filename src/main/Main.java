@@ -22,6 +22,7 @@ public class Main {
                     "3-Estudo de listas encadeadas\n"+
                     "4-Estudo de listas duplamente encadeadas\n"+
                     "5-Estudo de pilhas\n"+
+                    "6-Estudo de filas\n"+
                     "0-Sair";
 
             String strx = JOptionPane.showInputDialog(null,menu);
@@ -42,6 +43,8 @@ public class Main {
                     break;
                 case 5:
                     pilha();
+                    break;
+                case 6:
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
@@ -228,6 +231,9 @@ public class Main {
 
         JOptionPane.showMessageDialog(null,"Se a nossa implementação estiver correta o software exibirá a última pessoa cadastrada\n" +
                 "Pessoa:\n"+ pilha.desempilhar().getNome());
+    }
+    private static void fila(){
+
     }
 
 }
