@@ -98,6 +98,7 @@ unicamente vinculadas formadas a partir dos mesmos itens de dados, mas em ordens
 
 ```
 ### Stacks / Pilhas
+![gif](https://github.com/lramon2001/EstruturaDeDados1/blob/main/stack.gif)
 ```
 Pilha ou stack é um tipo especial de lista linear em que todas as operações de inserção e remoção são realizadas pela mesma 
 extremidade chamada topo. Os elementos são removidos na ordem do programa inversa daquela em que foram inseridos de modo que
