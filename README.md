@@ -118,6 +118,7 @@ Uma pilha geralmente suporta 4 operações básicas:
 -PULL:altera o elemento posicionado no topo da pilha;
 ```
 ## Queues / Filas
+![gif](https://github.com/lramon2001/EstruturaDeDados1/blob/main/fila.gif)
 ```
 A Fila é uma estrutura de dados bastante usada em computação. Na estrutura de fila, os acessos aos elementos também seguem uma regra. 
 O que diferencia a fila da pilha é a ordem de saída dos elementos: enquanto na pilha “o último que entra é o primeiro que sai”, na fila 
