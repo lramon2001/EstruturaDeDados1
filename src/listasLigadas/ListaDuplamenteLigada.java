@@ -22,6 +22,7 @@ public class ListaDuplamenteLigada<T> {
         }
         else{
             this.ultimoNo.setProximo(novoNo);
+            novoNo.setAnterior(this.ultimoNo);
             this.ultimoNo=novoNo;
         }
         tamanho++;
@@ -43,11 +44,13 @@ public class ListaDuplamenteLigada<T> {
         if(posicao==0){
             No<T> novoNo = new No<T>(elemento);
             novoNo.setProximo(this.primeiroNo);
+            this.primeiroNo.setAnterior(novoNo);
             this.primeiroNo=novoNo;
         }
         else if(posicao==tamanho()-1){
             No<T> novoNo = new No<T>(elemento);
             this.ultimoNo.setProximo(novoNo);
+            novoNo.setAnterior(this.ultimoNo);
             this.ultimoNo=novoNo;
 
         }
@@ -57,6 +60,8 @@ public class ListaDuplamenteLigada<T> {
             No<T> noAnteior = recuperarNo(posicao-1);
             noAnteior.setProximo(novoNo);
             novoNo.setProximo(noAtual);
+            noAtual.setAnterior(novoNo);
+            novoNo.setAnterior(noAnteior);
 
         }
         this.tamanho++;
