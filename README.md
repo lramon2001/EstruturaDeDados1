@@ -31,11 +31,18 @@
 - Implementing removal features / Implementando as funcionalidades de remoção;
 - Getting to know the LinkedList class / Conhecendo a classe LinkedList.
 
-### Doubly Linked List / Lista Duplamente Ligada
+### Doubly Linked Lists / Listas Duplamente Ligada
 - Definition of doubly linked lists / Definição de listas duplamentes ligadas;
 - Basic concepts and implementations / Conceitos e implementações básicas;
 - Modifying the removal methods / Modificando os métodos de remoção;
 - Testing the doubly linked list / Testando a lista duplamente ligada. 
+
+### Stacks / Pilhas
+- Basic concept / Conceito básico;
+- Implementing the stacking and checking the existence of nodes functionality / Implementando as funcionalidades de empilhamento e de verificação de existênica de nós;
+- Implementing the destacking functionality / Implementando a funcionalidade de desempilhamento;
+
+
 
 ## Memory management / Gerenciamento de memória
 ![imagem](https://github.com/lramon2001/EstruturaDeDados1/blob/main/reference-type.png)
@@ -78,7 +85,7 @@ célula. Desse modo, as células da estrutura não precisam estar em posições 
 se torne dinâmica, pois há qualquer momento, é possível alocar uma nova célula e mudar os ponteiros das células já 
 existentes, de modo que a nova célula seja inserida na estrutura com êxito, na posição desejada pelo programador.
 ```
-## Doubly Linked List / Lista Duplamente Ligada
+## Doubly Linked Lists / Listas Duplamente Ligada
 ![gif](https://github.com/lramon2001/EstruturaDeDados1/blob/main/listaDuplamenteLigadas.gif)
 ```
 Em ciência da computação, uma lista duplamente ligada (ou lista duplamente encadeada) é uma estrutura de dados ligada que 
@@ -89,6 +96,23 @@ apontam para algum tipo de terminador, tipicamente um nó sentinela ou nulo, par
 apenas um nó sentinela, a lista será vinculada circularmente através do nó sentinela. Ele pode ser conceituado como duas listas
 unicamente vinculadas formadas a partir dos mesmos itens de dados, mas em ordens sequenciais opostas.
 
+```
+### Stacks / Pilhas
+![gif](https://github.com/lramon2001/EstruturaDeDados1/blob/main/stack.gif)
+```
+Pilha ou stack é um tipo especial de lista linear em que todas as operações de inserção e remoção são realizadas pela mesma 
+extremidade chamada topo. Os elementos são removidos na ordem do programa inversa daquela em que foram inseridos de modo que
+o último elemento que entra é sempre o primeiro ser executado , por isto este tipo de estrutura é chamada LIFO (Last In - First Out)
+ou FILO (First In - Last Out).
+"O exemplo mais prático que costuma utilizar-se para entender o processo de pilha é como uma pilha de livros ou pilha de pratos, no qual
+ao se colocar diversos elementos uns sobre os outros, se quisermos pegar o livro mais abaixo deveremos tirar todos os livros que estiverem 
+sobre ele."
+
+Uma pilha geralmente suporta 4 operações básicas:
+-TOP: acessa-se o elemento posicionado no topo da pilha;
+-PUSH: insere um novo elemento no topo da pilha;
+-POP: remove o elemento do topo da pilha.
+-PULL:altera o elemento posicionado no topo da pilha;
 ```
 
 ## History / História
