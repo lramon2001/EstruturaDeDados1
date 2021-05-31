@@ -99,9 +99,13 @@ unicamente vinculadas formadas a partir dos mesmos itens de dados, mas em ordens
 ```
 ### Stacks / Pilhas
 ```
-Pilha ou stack é um tipo especial de lista linear em que todas as operações de inserção e remoção são realizadas pela mesma extremidade chamada topo.
-Os elementos são removidos na ordem do programa inversa daquela em que foram inseridos de modo que o último elemento que entra é sempre o primeiro ser executado , por isto este tipo de estrutura é chamada LIFO (Last In - First Out) ou FILO (First In - Last Out).
-"O exemplo mais prático que costuma utilizar-se para entender o processo de pilha é como uma pilha de livros ou pilha de pratos, no qual ao se colocar diversos elementos uns sobre os outros, se quisermos pegar o livro mais abaixo deveremos tirar todos os livros que estiverem sobre ele."
+Pilha ou stack é um tipo especial de lista linear em que todas as operações de inserção e remoção são realizadas pela mesma 
+extremidade chamada topo. Os elementos são removidos na ordem do programa inversa daquela em que foram inseridos de modo que
+o último elemento que entra é sempre o primeiro ser executado , por isto este tipo de estrutura é chamada LIFO (Last In - First Out)
+ou FILO (First In - Last Out).
+"O exemplo mais prático que costuma utilizar-se para entender o processo de pilha é como uma pilha de livros ou pilha de pratos, no qual
+ao se colocar diversos elementos uns sobre os outros, se quisermos pegar o livro mais abaixo deveremos tirar todos os livros que estiverem 
+sobre ele."
 
 Uma pilha geralmente suporta 4 operações básicas:
 -TOP: acessa-se o elemento posicionado no topo da pilha;
