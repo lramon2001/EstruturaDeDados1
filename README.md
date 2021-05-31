@@ -31,11 +31,18 @@
 - Implementing removal features / Implementando as funcionalidades de remoção;
 - Getting to know the LinkedList class / Conhecendo a classe LinkedList.
 
-### Doubly Linked List / Lista Duplamente Ligada
+### Doubly Linked Lists / Listas Duplamente Ligada
 - Definition of doubly linked lists / Definição de listas duplamentes ligadas;
 - Basic concepts and implementations / Conceitos e implementações básicas;
 - Modifying the removal methods / Modificando os métodos de remoção;
 - Testing the doubly linked list / Testando a lista duplamente ligada. 
+
+### Stacks / Pilhas
+- Basic concept / Conceito básico;
+- Implementing the stacking and checking the existence of nodes functionality / Implementando as funcionalidades de empilhamento e de verificação de existênica de nós;
+- Implementing the destacking functionality / Implementando a funcionalidade de desempilhamento;
+
+
 
 ## Memory management / Gerenciamento de memória
 ![imagem](https://github.com/lramon2001/EstruturaDeDados1/blob/main/reference-type.png)
