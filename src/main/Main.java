@@ -34,7 +34,7 @@ public class Main {
                     break;
                 case 2:
 
-                    vetores();
+                    vetor();
                     break;
                 case 3:
                     listaLigada();
@@ -109,7 +109,7 @@ public class Main {
 
     }
 
-    private static void vetores( ) throws IllegalAccessException {
+    private static void vetor( ) throws IllegalAccessException {
            Vetor<Pessoa> vetor = new Vetor<Pessoa>();
            JOptionPane.showMessageDialog(null,"Seja bem vindo ao estudo de vetores. Preciso que você \n" +
                                                                     "Cadastre 3 pessoas para contuarmos o estudo");
