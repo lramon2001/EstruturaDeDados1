@@ -1,5 +1,6 @@
 package main;
 
+import filas.Fila;
 import listasLigadas.ListaDuplamenteLigada;
 import listasLigadas.ListaLigada;
 import models.Pessoa;
@@ -45,6 +46,7 @@ public class Main {
                     pilha();
                     break;
                 case 6:
+                    fila();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,"OPÇÃO INVÁLIDA");
@@ -229,10 +231,27 @@ public class Main {
                 "R="+pilha.estaVazia());
         JOptionPane.showMessageDialog(null,"Testando o método desempilhar\n");
 
-        JOptionPane.showMessageDialog(null,"Se a nossa implementação estiver correta o software exibirá a última pessoa cadastrada\n" +
+        JOptionPane.showMessageDialog(null,"Se a nossa implementação estiver correta o software exibirá o nome da última pessoa cadastrada\n" +
                 "Pessoa:\n"+ pilha.desempilhar().getNome());
     }
     private static void fila(){
+        Fila<Pessoa> fila = new Fila<Pessoa>();
+       JOptionPane.showMessageDialog(null,"Seja bem vindo ao estudo de Filas.");
+       JOptionPane.showMessageDialog(null,"Já que você ainda não cadastrou nenhuma pessoa, vamos  testar o método estaVazia().\n" +
+               "Software, a fila está vazia?\n"+fila.estaVazia());
+       JOptionPane.showMessageDialog(null,"Agora preciso que você cadastre 4 pessoas para testar nossa fila.");
+        for(int i=0;i<4;i++){
+            Pessoa pessoa = new Pessoa();
+            String nome =JOptionPane.showInputDialog(null,"Digite o nome da pessoa "+(i+1));
+            int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o id da pessoa "+(i+1)));
+            pessoa.setNome(nome);
+            pessoa.setId(id);
+            fila.enfileirar(pessoa);
+        }
+        JOptionPane.showMessageDialog(null,"Testando o método desenfileirar\n");
+
+        JOptionPane.showMessageDialog(null,"Se a nossa implementação estiver correta o software exibirá o nome da primeira pessoa cadastrada\n" +
+                "Pessoa:\n"+ fila.desenfileirar().getNome());
 
     }
 
